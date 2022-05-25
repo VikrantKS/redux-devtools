@@ -58,7 +58,10 @@ postMerge :
       
         
 preMerge : 
-  
+  preRun: 
+    command:
+      - npm install
+      
   subModules:          #Not to be changed
      
     - name: react-base16-styling     
