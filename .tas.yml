@@ -52,6 +52,21 @@ postMerge :
             command:
               - node --version 
         configFile : "./jest.config.js"
+        
+      - name: react-dock     
+        path : "./packages/react-dock"
+        pattern: 
+          - "./test/index.test.tsx"
+
+        framework : jest
+        preRun:
+          command:
+            - npm run build
+
+        postRun:
+            command:
+              - node --version 
+        configFile : "./jest.config.js"
       
         
       
