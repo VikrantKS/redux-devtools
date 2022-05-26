@@ -61,6 +61,7 @@ postMerge :
         framework : jest
         preRun:
           command:
+            - npm i 
             - npm run build
 
         postRun:
@@ -191,6 +192,7 @@ postMerge :
         framework : jest
         preRun:
           command:
+            - npm i
             - npm run build
 
         postRun:
