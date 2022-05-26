@@ -77,7 +77,7 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - npm run build
+            - npm i
 
         postRun:
             command:
@@ -92,7 +92,7 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - npm run build
+            - npm i
 
         postRun:
             command:
@@ -100,8 +100,105 @@ postMerge :
         configFile : "./jest.config.js"  
       
         
-      
+      - name: redux-devtools-inspector-monitor-test-tab     
+        path : "./packages/redux-devtools-inspector-monitor-test-tab"
+        pattern: 
+          - "./test/assertions.spec.ts"
+          - "./test/TestGenerator.spec.tsx"
+
+        framework : jest
+        preRun:
+          command:
+            - npm i
+
+        postRun:
+            command:
+              - node --version 
+        configFile : "./jest.config.js"
         
+      - name: redux-devtools-inspector-monitor-trace-tab    
+        path : "./packages/redux-devtools-inspector-monitor-trace-tab"
+        pattern: 
+          - "./test/StackTraceTab.spec.tsx"
+
+        framework : jest
+        preRun:
+          command:
+            - npm i
+
+        postRun:
+            command:
+              - node --version 
+        configFile : "./jest.config.js"
+        
+      
+      - name: redux-devtools-instrument   
+        path : "./packages/redux-devtools-instrument"
+        pattern: 
+          - "./test/instrument.spec.ts"
+
+        framework : jest
+        preRun:
+          command:
+            - npm i
+
+        postRun:
+            command:
+              - node --version 
+        configFile : "./jest.config.js"
+        
+      
+      - name: redux-devtools-serialize   
+        path : "./packages/redux-devtools-serialize"
+        pattern: 
+          - "./test/helpers.spec.ts"
+          - "./test/immutable.spec.ts"
+
+        framework : jest
+        preRun:
+          command:
+            - npm i
+
+        postRun:
+            command:
+              - node --version 
+        configFile : "./jest.config.js"
+        
+        
+      - name: redux-devtools-ui   
+        path : "./packages/redux-devtools-ui"
+        pattern: 
+          - "./test/*.test.*"
+
+
+        framework : jest
+        preRun:
+          command:
+            - npm i
+
+        postRun:
+            command:
+              - node --version 
+        configFile : "./jest.config.js"  
+        
+      
+      - name: redux-devtools   
+        path : "./packages/redux-devtools"
+        pattern: 
+          - "./test/persistState.spec.ts"
+
+
+        framework : jest
+        preRun:
+          command:
+            - npm run build
+
+        postRun:
+            command:
+              - node --version 
+        configFile : "./jest.config.js"  
+        
+      
 preMerge : 
   
   subModules:          #Not to be changed
