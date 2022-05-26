@@ -67,8 +67,37 @@ postMerge :
             command:
               - node --version 
         configFile : "./jest.config.js"
-      
         
+      - name: react-json-tree     
+        path : "./packages/react-json-tree"
+        pattern: 
+          - "./test/index.spec.tsx"
+          - "./test/objType.spec.ts"
+
+        framework : jest
+        preRun:
+          command:
+            - npm run build
+
+        postRun:
+            command:
+              - node --version 
+        configFile : "./jest.config.js"
+      
+      - name: redux-devtools-app     
+        path : "./packages/redux-devtools-app"
+        pattern: 
+          - "./test/app.spec.tsx"
+
+        framework : jest
+        preRun:
+          command:
+            - npm run build
+
+        postRun:
+            command:
+              - node --version 
+        configFile : "./jest.config.js"  
       
         
       
