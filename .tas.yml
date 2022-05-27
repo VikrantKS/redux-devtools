@@ -85,20 +85,20 @@ postMerge :
               - node --version 
         configFile : "./jest.config.js"
       
-      - name: redux-devtools-app     
-        path : "./packages/redux-devtools-app"
-        pattern: 
-          - "./test/app.spec.tsx"
+#       - name: redux-devtools-app     ## blocked  
+#         path : "./packages/redux-devtools-app"
+#         pattern: 
+#           - "./test/app.spec.tsx"
 
-        framework : jest
-        preRun:
-          command:
-            - npm i
+#         framework : jest
+#         preRun:
+#           command:
+#             - npm i
 
-        postRun:
-            command:
-              - node --version 
-        configFile : "./jest.config.js"  
+#         postRun:
+#             command:
+#               - node --version 
+#         configFile : "./jest.config.js"  
       
         
 #       - name: redux-devtools-inspector-monitor-test-tab     
