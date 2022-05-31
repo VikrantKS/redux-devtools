@@ -193,7 +193,6 @@ postMerge :
         preRun:
           command:
             - npm i
-            - npm run build
 
         postRun:
             command:
@@ -252,4 +251,4 @@ preMerge :
 
 parallelism: 1 # this will be depricated in future
 version : 2.0
-
+nodeVersion : 17.3.1
