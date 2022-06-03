@@ -236,5 +236,5 @@ preMerge :
       configFile : "./jest.config.js"
 
 parallelism: 1 # this will be depricated in future
-version : 2.0
+version : 2.0.1
 nodeVersion : 17.3.1
