@@ -6,7 +6,6 @@ postMerge :
   
   subModules:          #Not to be changed
       
-      
         
       - name: react-base16-styling     
         path : "./packages/react-base16-styling"
@@ -187,7 +186,10 @@ postMerge :
         
       
 preMerge : 
-  
+  preRun: 
+    command:
+      - npm install
+      
   subModules:          #Not to be changed
      
     - name: react-base16-styling     
